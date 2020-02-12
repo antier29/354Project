@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="cover.css">
+
+  </head>
+  <body>
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">354Tutorial</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="tutorialsMain.html">Tutorials</a>
+        <a class="nav-link" href="aboutRedo.html">About</a>
+      </nav>
+    </div>
+  </header>
+<br>
+  <main role="main" class="inner cover">
+
+    <h1 class="cover-heading">Tutorial 2</h1>
+    <hr>
+    <br>
+<div class="sectionSeperation">
+  <h2 class ="cover-heading">Functions</h2>
+    <br>
+
+    <h4>Named Functions</h4>
+    <p>In JavaScript, functions are defined by using the keyword <b><i>function</i></b>.
+    </p>
+    <pre>
+      function subtract(a,b)
+      {
+        return a - b;
+      }
+    </pre>
+    <p>In this function we want to subtract a and b. But with function declarations,
+      like we have above, they are executed later. You have to call to it later.
+      So to actually use the function we would simply use the function name follwed by
+      the two numbers we want to subtract.
+    <pre>
+      subtract(5,1);
+    </pre>
+      If you were to run this, you would get an answer of 4.
+    </div> <!-- section 1 -->
+<br>
+<br>
+<div class="sectionSeperation">
+<h4>Function Expression</h4>
+<p>A function expression is simply a function that is defined as a part of a larger expression.
+The function is not hoisted, just the variable itself.</p>
+<br>
+<pre>
+var something = function()
+{
+
+}
+</pre>
+
+</div> <!-- section 2 -->
+<br>
+<br>
+
+<div class="sectionSeperation">
+
+
+<h4>Arrow Functions</h4>
+<p>Also known as "fat arrow" functions, this type of function is a shorter way of writing a normal function. They
+can't be used as constructors though. </p>
+
+<pre>
+  const multiply(a,b) =>
+  {
+    return a * b
+  };
+</pre>
+<p>One cool thing is the curly brackets are not needed if there is only one expression present.</p>
+
+<br>
+<hr>
+<div class="sectionSeperation">
+<h2 class ="cover-heading">Optional Arguments</h2>
+<p>!!!!!!!!!!!!!!!!!!!!!</p>
+<pre>
+  CODE HERE
+</pre>
+</div>
+<hr>
+<div class="sectionSeperation">
+<h2 class="cover-heading">Rest Parameters</h2>
+<p>This allows you to represent an abundance of number agruments as an array.
+The last parameter uses <b><i>...</i></b> infront of the name.</p>
+<pre>
+  function add (…numbers)
+{
+	let result = 0;
+	for (let number of numbers)
+	{
+		result += number;
+	}
+return result;
+}
+
+function add(5)
+
+</pre>
+<p>This code will give you a result of 5.
+Rest Parameters are array instances. Rest parameters is just a better way to handle
+multiple inputs as a parameter in a function.</p>
+
+</div>
+
+<br>
+<hr>
+<div class="sectionSeperation">
+<h2 class="cover-heading">Scope</h2>
+<p>Scope determines the visibility of variables. For local scope, only the variable inside
+the function can be seen. If a variable is outside the function, it can not be seen</p>
+<pre>
+  //The code here can not use/see favColor
+
+  function colors()
+  {
+    var favColor = "Blue";
+
+    //The rest of the code in here can use favColor
+  }
+</pre>
+  <p>For global scope all functions can use the variable</p>
+  <pre>
+    var favColor = "Blue";
+    //any code here can use/see favColor
+
+    function colors()
+    {
+      //you can use/see favColor here.
+    }
+</pre>
+</div>
+
+
+<br>
+<hr>
+<div class="sectionSeperation">
+<h2 class="cover-heading">Nested Functions</h2>
+<p>Nested functions are similar to scope but the difference is the outer Functions
+can't see in but the inner functions can see out. </p>
+<pre>
+  const add = Function (someNumber)
+{
+	const doAddition = Function()
+	{
+		total = someNumber + someNumber;
+		return total;
+	}
+
+return doAddition());
+}
+</pre>
+</div>
+  </main>
+
+
+<hr>
+<br>
+  <footer class="mastfoot mt-auto">
+    <p>Spring 2020</p>
+  </footer>
+</div>
+
+</body>
+</html>

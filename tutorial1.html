@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="cover.css">
+
+  </head>
+  <body>
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">354Tutorial</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="tutorialsMain.html">Tutorials</a>
+        <a class="nav-link" href="aboutRedo.html">About</a>
+      </nav>
+    </div>
+  </header>
+<br>
+  <main role="main" class="inner cover">
+
+    <h1 class="cover-heading">Tutorial 1</h1>
+    <hr>
+    <br>
+<div class="sectionSeperation">
+    <h3 class = "cover-heading2"> Values & Types</h3>
+    <br>
+
+    <h4>Strings</h4>
+    <p>Strings can be written in 3 different ways</p>
+    <pre>
+    var str1 = "Double quotes"
+    var str2 = 'Single quotes'
+    var str3 = `Backticks`
+    </pre>
+    </div> <!-- section 1 -->
+<br>
+<div class="sectionSeperation">
+<h4>Numbers</h4>
+<p>Javascript supports scientific notation</p>
+<br>
+<pre>
+2.998e8 will be written as 299800000
+2.998e-3 will be written as 0.002998
+</pre>
+<p>Infinity &infin; and Negative Infinity - &infin; are used to know if you have
+  gone higher or lower than the largest possible number in Javascript.
+  That number is 1.797693131348623157e+308. Now that's a big number!</p>
+</div> <!-- section 2 -->
+<br>
+<br>
+
+<div class="sectionSeperation">
+<h2 class="cover-heading"> Unary Operators </h2>
+
+<h4>Typeof</h4>
+<p>This is used for debugging purposes or when you have data that changes periodiclly.</p>
+
+<pre>
+  typeof 9.3 will give you a number result<br>
+  typeof " " will give you a string<br>
+  typeof {} will give you a string
+</pre>
+
+<br>
+<h4>Plus, Negative and Logical Not </h4>
+<p> The plus sign ( + ), converts strings of numbers, booleans and null's to numbers.
+  The negative sign ( - ) does the exact same thing but negates it. </p>
+
+  <pre>
+    + 50 and + '50' will give the result of 50.
+    + '-50' will give the result of -50.
+    if you use the negative sign...
+    - 50 will give you -50
+    - '-50' will give you 50.
+    <br>
+  </pre>
+    <p>True will give you a result of 1 and null will give you a result of 0.
+    So if you were to negate them, you would get -1 and -0. Yes I said -0! It is
+    a weird thing to see but just think of it as any other number.</p>
+<br>
+
+<h4>Delete </h4>
+<p>You can use the delete operator to remove a property from an object.</p>
+<pre>
+  var myObj = {Major: “WebDevelopment”};
+	delete myObj.major
+	   >This will return true bc property is deleted
+
+
+	delete myObj.minor
+	  >This will also return true bc it doesn’t exist
+</pre>
+</div> <!-- section 3 -->
+<br>
+<div class="sectionSeperation">
+<h2 class ="cover-heading">Hoisting</h2>
+<p>Hoisting is when a browser/engine compiles variables and named-functions immediately.You are bringing them
+  to the top of the file.
+  When Javascript compiles all of your code, all var declarations
+  are hoisted/lifted to the top of their functional/local scope
+  of an inside function or to the top of their global scope
+if its an outside function regardless of where the actual declaration has been made. </p>
+
+</div>
+
+
+  </main>
+
+
+<hr>
+<br>
+  <footer class="mastfoot mt-auto">
+    <p>Spring 2020</p>
+  </footer>
+</div>
+
+</body>
+</html>
