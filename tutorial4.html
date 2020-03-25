@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="cover.css">
+
+  </head>
+  <body>
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">354Tutorial</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="tutorialsMain.html">Tutorials</a>
+        <a class="nav-link" href="aboutRedo.html">About</a>
+      </nav>
+    </div>
+  </header>
+<br>
+  <main role="main" class="inner cover">
+
+    <h1 class="cover-heading">Tutorial 4: Objects Part 2: Prototypal Inheritance and `this` </h1>
+    <hr>
+    <br>
+
+<div class="sectionSeperation">
+<h2 class="cover-heading"> Prototypal Inheritance </h2>
+
+<h4> </h4>
+<p> To add a new property to a constructor you have to add it to the constructor function
+Javascript objects will inherit properties and methods from a protoype.
+
+</p>
+<p>Lets say we have this function</p>
+<pre>
+  function Dog(name, breed, furColor)
+  {
+      this.fName = name;
+      this.breed = breed;
+      this.furColor = furColor;
+  }
+</pre>
+<p>If we wanted to add the dog's age we will use the prototype property</p>
+
+<pre>
+    Dog.prototype.age = "Two";
+</pre>
+<br>
+<h4>`this`</h4>
+<p> The keyword <b>this</b> refers to the object it is associated with.
+If it is used in a function then it refers to a global object. 
+If it is used in a method then it refers to the owner object. 
+</p>
+
+<p><i>this</i> in a method</p>
+  <pre>
+   var dog = {
+       firstName: "Lolly",
+       lastName: "Pop",
+       breed: "Maltese Yorkie Mix",
+       fullName : function(){
+           return this.firstName + " " + this.lastName;
+       }
+   }
+</pre>
+
+    <p> It will return as- Lolly Pop</p>
+<br>
+<br>
+<p><i>this</i> in a function</p>
+<pre>
+    function exampleFunction()
+    {
+        return this;
+    }
+</pre>
+<p>In this code <i>this</i> is refering to a global object. If you 
+were to use this same function but in strict mode, it would showcase "undefined" rather than "[object Window]"
+</p>
+
+  </main>
+
+
+<hr>
+<br>
+  <footer class="mastfoot mt-auto">
+    <p>Spring 2020</p>
+  </footer>
+</div>
+
+</body>
+</html>
