@@ -1,0 +1,218 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="cover.css">
+
+  </head>
+  <body>
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">354Tutorial</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="tutorialsMain.html">Tutorials</a>
+        <a class="nav-link" href="aboutRedo.html">About</a>
+      </nav>
+    </div>
+  </header>
+<br>
+<br>
+  <main role="main" class="inner cover">
+
+    <h1 class="cover-heading">Modules, Higher Order Functions, Array Methods</h1>
+    <hr>
+    <br>
+<div class="sectionSeperation">
+  <h2 class ="cover-heading">Modules</h2>
+    <br>
+
+    
+    <p> 
+        Modules are used when you want to split up your files. This way your code is smaller and easier to use. 
+        It is also helpful for when you want to edit the specific code without having to edit your 
+        entire block of code. You can access the modules variables and functions by using IMPORT and EXPORT.
+        Export: where variables functions labels and keywords are attainable from outside of the module. Import: you get access to the components of other modules
+        Why are they important? Modules are simply a smaller portion of code that you can reuse. You can use modules as classes in an object-oriented programming language. 
+        In order for import/export to work you need to have.
+        script type=“module” in your html. 
+
+        <pre>
+            //sayHi.js
+            export function sayHi(user)
+            {
+	            alert (`Hello, ${user}!`);
+            }
+
+            //main.js
+            import {sayHi} from ‘./sayHi.js’;
+
+            alert(sayHi); //function
+            sayHi(‘ash’); //Hello, ash!
+
+        </pre>
+    
+        
+    </p>
+
+    <h2 class ="cover-heading">Higher Order Functions
+    </h2>
+    <p>
+        How do they work? The definition of a higher order function says that it accepts a function as an argument and it can return a function.
+        If you have a method in which the second argument is a function, then you are using Higher Order Functions. 
+        You probably have used this before in your code, if you pass a callback function that is essentially a higher order function. 
+        Higher order functions can return a function. This is when you use composability. 
+        This is when you have code that is pretty repetitive and allows you to condense the code and avoid repeating code. So what makes them important?
+        Javascript allows you to pass a function as an argument and this is unique as many other programming languages do not let you do this.
+        
+    </p>
+    <br>
+    <h2 class ="cover-heading">Array Methods</h2>
+    <p>
+        <b>find()</b> <br>
+        This method will give you the value of the first array element that fits the function you provide(so it will give a true value)
+
+    </p>
+
+    <pre>
+        var grades = [90, 20, 80, 75]
+
+        function notPassingGrade(grade)
+        {
+            return grade < 70
+        }
+        
+        grades.find(notPassingGrade);
+        //20
+        
+    </pre>
+
+    <br>
+
+    <p>
+        The <b>findIndex()</b> method does essentially the same thing as find but will give you the array number as your result.
+
+    </p>
+
+    <pre>
+        var grades = [60, 20, 80, 75]
+
+        function notPassingGrade(grade)
+        {
+	        return grade > 70
+        }
+        
+        //2
+
+    </pre>
+<p> 80 is the value that will return true in this situation and since its in the second location in the array it will therefore return 2 
+</p>
+
+<br>
+
+<p>
+    <b>forEach()</b> array method is used when you want to display each array element with their corresponding keys. 
+
+</p>
+
+
+<br>
+<p>
+    <b>filter()</b> will return all the values in the array that you define
+
+</p>
+
+<pre>
+    var grades = [90, 20, 80, 75]
+
+    function notPassingGrade(grade)
+    {
+	    return grade >=70
+    }
+
+    // 90, 80,75
+</pre>
+
+<br>
+
+<p>
+<b>sort() </b>
+this method will, by default sort the values in an array as strings in alphabetical and ascending order. This is useful when sorting strings but if you are sorting numbers it will give you an incorrect answer. if you have the number 460 and 22, 22 will be sorted first because it starts with a 2 while the other number starts with a 4. 
+
+</p>
+
+<pre>
+    var colors = [“blue”, “yellow”, “orange”, “red”, “purple”];
+
+    //blue, orange, purple, red, yellow
+
+</pre>
+
+
+<br>
+
+<p>
+    <b>push()</b> is used when you want to add a new element to an array but it will be added to the end of it. 
+
+</p>
+
+<pre>
+    var colors = [“blue”, “yellow”, “orange”, “red”, “purple”];
+
+    colors.push(“pink”);
+
+    //blue yellow orange red purple pink
+
+</pre>
+
+<br>
+<p>
+    if you want to add elements to the front of an array you will use the <b>unshift()</b> array method
+
+</p>
+
+<pre>
+    var colors = [“blue”, “yellow”, “orange”, “red”, “purple”];
+
+    colors.unshift(“pink”);
+
+    //pink blue yellow orange red purple
+
+</pre>
+
+<p>
+    <b>shift()</b> is used when you want to remove the first element in an array
+
+</p>
+<pre>
+    var colors = [“blue”, “yellow”, “orange”, “red”, “purple”];
+
+    colors.shift;
+    
+    //yellow orange red purple 
+
+</pre>
+
+
+
+   
+</div> 
+  </main>
+
+<hr>
+<br>
+  <footer class="mastfoot mt-auto">
+    <p>Spring 2020</p>
+  </footer>
+</div>
+
+</body>
+</html>
